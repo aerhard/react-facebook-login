@@ -18,6 +18,7 @@ class FacebookLogin extends React.Component {
     icon: PropTypes.string,
     language: PropTypes.string,
     autoFocus: PropTypes.bool,
+    type: PropTypes.string,
   };
 
   static defaultProps = {
@@ -112,6 +113,7 @@ class FacebookLogin extends React.Component {
     return (
       <div>
         <button
+            type={this.props.type}
             autoFocus={this.props.autoFocus}
             className={this.props.cssClass + ' ' + this.props.size}
             onClick={this.click}>
